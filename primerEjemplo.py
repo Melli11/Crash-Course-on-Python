@@ -85,4 +85,23 @@ def lucky_number(name):
 print(lucky_number("Kay"))
 print(lucky_number("Cameron"))
 
-# HOLASOYPRIMERCOMNEY
+print("A dog" > "A mouse")
+print(9999+8888)
+print(100*100)
+print(9999+8888 > 100*100)
+print ("big" > "small")
+print((10 >= 5*2) and (10 <= 5*2))
+print(5//4)
+# # HOLASOYPRIMERCOMNEY
+# Usando if, elif ,else y operadores 
+# def number_group(number):
+#   if number > 0:
+#     return "Positive"
+#   elif number == 0:
+#     return "Zero"
+#   else:
+#     return "Negative"
+
+# print(number_group(10)) #Should be Positive
+# print(number_group(0)) #Should be Zero
+# print(number_group(-5)) #Should be Negative
