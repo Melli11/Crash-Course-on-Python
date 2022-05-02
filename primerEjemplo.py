@@ -91,7 +91,7 @@ print(100*100)
 print(9999+8888 > 100*100)
 print ("big" > "small")
 print((10 >= 5*2) and (10 <= 5*2))
-print(5//4)
+print(5//4) # Division Real
 # # HOLASOYPRIMERCOMNEY
 # Usando if, elif ,else y operadores 
 # def number_group(number):
