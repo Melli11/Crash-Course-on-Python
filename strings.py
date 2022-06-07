@@ -34,3 +34,31 @@ def first_and_last(message):
 print(first_and_last("else"))
 print(first_and_last("tree"))
 print(first_and_last(""))
+
+#More Strings Methods
+# ¿Quiere probar algunos métodos de cadena usted mismo? ¡Darle una oportunidad! Rellena los huecos de la función initials para que 
+# devuelva las iniciales de las palabras contenidas en la frase recibida, en mayúsculas.
+# Por ejemplo: "Universal Serial Bus" debería devolver "USB"; "local area network" debe devolver "LAN".
+
+def initials(phrase):
+    words = phrase.split() #separo la frase en  palabras
+    result = ""
+    for word in words: #recorro una lista de palabras
+        result += word[0] #guardo letra inicial de cada palabra
+    return result.upper() #retorno las palabras acumuladas en mayuscula
+
+print(initials("Universal Serial Bus")) # Should be: USB
+print(initials("local area network")) # Should be: LAN
+print(initials("Operating system")) # Should be: OS
+
+#Formatting Strings
+# Modifique la función student_grade usando el método de formato, para que devuelva la frase "X recibió Y% en el examen".
+# Por ejemplo, student_grade("Reed", 80) debería devolver "Reed recibió el 80 % en el examen".
+
+def student_grade(name, grade):
+	aux = "{name} received {grade}% on the exam".format(name = name, grade = grade)
+	return aux
+
+print(student_grade("Reed", 80))
+print(student_grade("Paige", 92))
+print(student_grade("Jesse", 85))
