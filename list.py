@@ -56,13 +56,14 @@ print(file_size(('Program', 'py', 1239))) # Should print 1.21
 
 def skip_elements(elements):
 	index = 0
-	aux = []
-	for index,elem in enumerate (elements): ##recorro lista
-		if  check(index) == True: ##solo indices pares
-			aux.append(elements[index])
+	aux = [] #creo lista vacia auxiliar servira para agregar el contenido
+	for index,elem in enumerate (elements): ##recorro lista, con la funcion enumerate existe la ventaja de no tener que usar un indice por fuera, 
+        #ya que lo "crea" solo, index es el indice y elem es cada elemento de la lista
+		if  check(index) == True: ##chequeo indices pares
+			aux.append(elements[index]) #append inserta el contenido al final de la lista, con elements[index] accedo a los indices pares de la lista original y los transfiero al auxiliar
 	return aux
-
-def check(num):
+ 
+def check(num): ##funcion auxiliar para chequear paridad
     if (num % 2) == 0:
         return True
     else:
