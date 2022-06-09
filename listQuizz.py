@@ -82,3 +82,29 @@ def group_list(group, users):
 # "El invitado tiene X años y trabaja como __". para cada uno. Por ejemplo, guest_list(('Ken', 30, "Chef"), ("Pat", 35, 'Lawyer'), ('Amanda', 25, "Engineer"))
 # debe imprimirse: Ken tiene 30 años y trabaja como Chef. 
 # Pat tiene 35 años y trabaja como abogado. Amanda tiene 25 años y trabaja como Ingeniera. Complete los espacios en esta función para hacer eso.
+
+# La función guest_list lee una lista de tuplas con el nombre, la edad y la profesión de cada invitado a la fiesta, 
+# e imprime la oración "El invitado tiene X años y trabaja como __". para cada uno. 
+# Por ejemplo, guest_list(('Ken', 30, "Chef"), ("Pat", 35, 'Lawyer'), ('Amanda', 25, "Engineer")) 
+# debe imprimirse: Ken tiene 30 años y trabaja como Chef. Pat tiene 35 años y trabaja como abogado. 
+# Amanda tiene 25 años y trabaja como Ingeniera. Complete los espacios en esta función para hacer eso.
+
+def trasformarTuplaAString(tupla):
+	nombre,edad,profesión = tupla
+	frase = nombre + " is " + str(edad) + " years old and works as " + profesión
+	return frase
+
+def guest_list(guests):
+	for tupla in guests:
+		print(trasformarTuplaAString(tupla))
+		# print(___.format(___))
+
+guest_list([('Ken', 30, "Chef"), ("Pat", 35, 'Lawyer'), ('Amanda', 25, "Engineer")])
+
+#Click Run to submit code
+"""
+Output should match:
+Ken is 30 years old and works as Chef
+Pat is 35 years old and works as Lawyer
+Amanda is 25 years old and works as Engineer
+"""
