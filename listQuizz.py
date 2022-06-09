@@ -32,6 +32,23 @@ print(newfilenames)
 # una transformación de texto simple que modifica cada palabra moviendo el primer carácter al final y agregando "ay" al final.
 # Por ejemplo, python termina como ythonpay
 
+def convertirAPigLatin(word,primerCaracter,say):
+  word = word[1:] + primerCaracter + say  
+  return word
+
+def pig_latin(text):
+  words = text.split()
+  # primerCaracter = word[index][0]
+  say = "ay"
+  newList = []
+  # for index in words:
+  for index,word in enumerate (words):
+    newList.append(convertirAPigLatin(word,word[0],say))
+  return " " .join (newList)
+		
+print(pig_latin("hello how are you")) # Should be "ellohay owhay reaay ouyay"
+print(pig_latin("programming in python is fun")) # Should be "rogrammingpay niay ythonpay siay unfay"
+
 # Pregunta 3
 # Los permisos de un archivo en un sistema Linux se dividen en tres conjuntos de tres permisos: lectura, escritura y ejecución para el propietario, el grupo y otros.
 # Cada uno de los tres valores se puede expresar como un número octal que suma cada permiso, 
@@ -46,6 +63,19 @@ print(newfilenames)
 # Pregunta 5
 # Pregunta 5 La función group_list acepta un nombre de grupo y una lista de miembros, y devuelve una cadena con el formato: group_name: miembro1, miembro2, …
 # Por ejemplo, group_list("g", ["a","b","c"] ) devuelve "g: a, b, c". Complete los espacios en esta función para hacer eso.
+
+prueba1 = "algo"
+prueba2 = 'mas'
+resultado = prueba1 + prueba2
+print (resultado) # imprime "algomas"
+
+def group_list(group, users):
+  dosPuntos = ": "
+  group = group + dosPuntos
+  result = ", ".join (users)
+  return group+result
+
+
 
 # Pregunta 6
 # La función guest_list lee una lista de tuplas con el nombre, la edad y la profesión de cada invitado a la fiesta, e imprime la oración
