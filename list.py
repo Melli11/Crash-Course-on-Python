@@ -84,3 +84,31 @@ print(odd_numbers(10)) # Should print [1, 3, 5, 7, 9]
 print(odd_numbers(11)) # Should print [1, 3, 5, 7, 9, 11]
 print(odd_numbers(1))  # Should print [1]
 print(odd_numbers(-1)) # Should print []
+
+# Prueba
+listaDePrueba = []
+palabraASeparar = "Algo para separar"
+words = palabraASeparar.split()
+print(words) # ['Algo', 'para', 'separar']
+              # formateo como string nuevamente
+print ("El primer caracter de algo para separar es {}".format(words[0][0]))
+
+palabra = "Algo para separar dos"
+
+def convertirAPigLatin(word,primerCaracter,say):
+  word =  word[1:] + primerCaracter + say 
+  return word
+
+print (convertirAPigLatin("tren","a","ay"))
+
+def pig_latin(text):
+  words = text.split()
+  # primerCaracter = word[index][0]
+  say = "ay"
+  newList = []
+  # for index in words:
+  for index,word in enumerate (words):
+    newList.append(convertirAPigLatin(word,word[0],say))
+  return " " .join (newList)
+
+print (pig_latin(palabra))

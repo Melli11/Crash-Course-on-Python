@@ -4,6 +4,29 @@
 # Complete los espacios en blanco en el código utilizando cualquiera de los métodos que ha aprendido hasta ahora, 
 # como un bucle for o una lista de comprensión.
 
+filenames = ["program.c", "stdio.hpp", "sample.hpp", "a.out", "math.hpp", "hpp.out"]
+def checkExtensionWord(word):
+    if (".hp" in word):
+        return True
+    else:
+        return False
+
+def modificarPalabraConExtension(word):
+    word = word [:word.index(".hp")+2]
+    return word
+
+# palabraPrueba = "picapiedra.hpp"
+# print (modificarPalabraConExtension(palabraPrueba))
+newfilenames = []
+for index,word in enumerate (filenames):
+    if(checkExtensionWord(word) == True): #".hp"
+        newfilenames.append(modificarPalabraConExtension(word))
+    else:
+        newfilenames.append(filenames[index])
+    
+print(newfilenames) 
+
+
 # Pregunta 2 
 # Vamos a crear una función que convierta el texto en pig latin:
 # una transformación de texto simple que modifica cada palabra moviendo el primer carácter al final y agregando "ay" al final.
