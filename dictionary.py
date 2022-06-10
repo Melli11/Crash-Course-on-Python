@@ -31,3 +31,4 @@ wardrobe = {"shirt":["red","blue","white"], "jeans":["blue","black"]}
 for prenda,lista_color in wardrobe.items():
 	for color in lista_color:
 		print("{} {}".format(color,prenda))
+		
