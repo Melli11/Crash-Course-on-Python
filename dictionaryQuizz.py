@@ -10,6 +10,10 @@
 # El método dict.update actualiza un diccionario con los elementos que provienen del otro diccionario, de modo que las entradas existentes se reemplazan y 
 # se agregan nuevas entradas. ¿Cuál es el contenido del diccionario “vestuario” al final del siguiente código?
 
+wardrobe = {'shirt': ['red', 'blue', 'white'], 'jeans': ['blue', 'black']}
+new_items = {'jeans': ['white'], 'scarf': ['yellow'], 'socks': ['black', 'brown']}
+wardrobe.update(new_items)
+print(wardrobe)
 # Pregunta 4 
 # ¿Cuál es la principal ventaja de usar diccionarios sobre listas?
 
