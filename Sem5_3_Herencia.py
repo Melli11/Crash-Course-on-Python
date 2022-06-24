@@ -34,9 +34,9 @@ class Clothing:
   def Stock_by_Material(self, material):
     count=0
     n=0
-    for item in Clothing.stock['___']:
+    for item in Clothing.stock['material']:
       if item == material:
-        count += Clothing.___['amount'][n]
+        count += Clothing.stock['amount'][n]
         n+=1
     return count
 
@@ -51,3 +51,12 @@ polo.add_item(polo.name, polo.material, 4)
 sweatpants.add_item(sweatpants.name, sweatpants.material, 6)
 current_stock = polo.Stock_by_Material("Cotton")
 print(current_stock)
+
+
+
+
+# ---------------------------------------------------------------------------------------------------------------------
+#Digamos que queremos usar el módulo de aprendizaje profundo de Keras. Al ejecutar el script, se imprime un error que indica que no se 
+# pudo encontrar el módulo Keras. ¿Qué nos podríamos haber perdido?
+
+# RTA: We need to import the Keras module
